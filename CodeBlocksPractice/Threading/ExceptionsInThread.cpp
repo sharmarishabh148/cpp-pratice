@@ -31,6 +31,7 @@ class ThreadWrapper
 {
     thread t;
     public:
+        // we take rvalue refrence
         ThreadWrapper(thread&& t): t(std::move(t)){}
         ~ThreadWrapper()
         {
